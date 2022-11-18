@@ -16,15 +16,15 @@ class Solution:
                 row, col = q.pop()
                 if (row, col) not in visited:
                     area += 1
-                visited.add((row, col))
-                directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
-                for dr, dc in directions:
-                    nr, nc = row + dr, col + dc
-                    if (0 <= nr < ROWS and
-                    0 <= nc < COLS and 
-                    (nr, nc) not in visited and
-                    grid[nr][nc] == 1):
-                        q.append((nr, nc))
+                    visited.add((row, col))
+                    directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+                    for dr, dc in directions:
+                        nr, nc = row + dr, col + dc
+                        if (0 <= nr < ROWS and
+                        0 <= nc < COLS and 
+                        (nr, nc) not in visited and
+                        grid[nr][nc] == 1):
+                            q.append((nr, nc))
             if area > max_area[0]:
                 max_area[0] = area
 
