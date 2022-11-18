@@ -1,5 +1,5 @@
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
+    def subsets(self, nums):
         res = []
         def backtrack(length, cur_index, cur_array):
             if  cur_index >= length:
